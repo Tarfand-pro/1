@@ -20,6 +20,8 @@ $messageid = $update->callback_query->message->message_id;
 $block = file_get_contents("administrative/block-list.txt");
 $feed = 394653247;
 $banall = file_get_contents("administrative/banall-member/banall.txt");
+$time = file_get_contents("https://provps.ir/td?td=time");
+$date = file_get_contents("https://provps.ir/td?td=date");
 $command = file_get_contents('administrative/user/'.$from_id."/command.txt");
 $vipbot = file_get_contents('administrative/user/'.$from_id."/vipp.txt");
 $idtxt = file_get_contents("administrative/access/robots.txt");
@@ -52,7 +54,7 @@ $membersvip = file_get_contents("administrative/user/$from_id/gold.txt");
 $fileid = $update->message->document->file_id;
 $photoid = $update->message->photo->file_id;
 $musicid = $update->message->audio->file_id;
-$truechannel = json_decode(file_get_contents("https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/getChatMember?chat_id=@syeioo5&user_id=".$from_id));
+$truechannel = json_decode(file_get_contents("https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/getChatMember?chat_id=@syeioo&user_id=".$from_id));
 $tch = $truechannel->result->status;
 $message_id = $update->message->message_id;
 $message_id_call = $update->callback_query->message->message_id;
@@ -110,7 +112,7 @@ Don't Message Again...❌*
 	elseif($tch != 'member' && $tch != 'creator' && $tch != 'administrator'){
 	SendMessage($chat_id,"📛 برای حمایت از ما و همچنان ربات ابتدا وارد کانال زیر بشید 👇
 
-🆔 @syeioo5
+🆔 @syeioo
 
 ✅ سپس روی JOIN بزنید و به ربات برگشته عبارت 👇
 
@@ -149,7 +151,7 @@ Don't Message Again...❌*
 ⚛️ برای ساخت ربات دکمه (🛠ساختن ربات) رو بزنید.
 
 برای دیدن آموزش دریافت توکن نیز روی دکمه ( راهنما) بزنید و یا از فیلم های آموزشی استفاده کنید.
-🆔 @crfreebot","html","true",$button_official_admin);
+🆔 @pvsaz5450bot","html","true",$button_official_admin);
   }else{
   SendMessage($chat_id,"زبان فارسی 🇮🇷 تنظیم شد
   ســلام $name عزیزم😄
@@ -165,7 +167,7 @@ Don't Message Again...❌*
 ⚛️ برای ساخت ربات دکمه (🛠ساختن ربات) رو بزنید.
 
 برای دیدن آموزش دریافت توکن نیز روی دکمه ( راهنما) بزنید و یا از فیلم های آموزشی استفاده کنید.
-🆔 @crfreebot ","html","true",$button_official_fa);
+🆔 @pvsaz5450bot ","html","true",$button_official_fa);
   }
   }
   //===============
@@ -244,7 +246,7 @@ Don't Message Again...❌*
 زمان استفاده : <code>$time</code>
 تاریخ استفاده: <code>$date</code>
 💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-🇮🇷 @syeioo5
+🇮🇷 @syeioo
 🇮🇷 @pvsaz5450bot","html","true");
 	}
 	}else{
@@ -254,8 +256,14 @@ Don't Message Again...❌*
 	}
 	}
 	}
-	elseif($text == "🎁استفاده از کد💎"){
+	/*elseif($text == "🎁استفاده از کد💎"){
   SendMessage($chat_id,"برای ویژه کردن نوع رباتت رو انتخاب کن👇","html","true",$button_bots);
+}*/
+	elseif($text == "🎁استفاده از کد💎"){
+      SendMessage($chat_id,"از دستور
+/code CODEMOREDNAZAR
+استفاده کنید");
+
 }
 elseif($text == "🗣پیامرسان⚙️"){
 	save('administrative/user/'.$from_id."/command.txt","checkcode");
@@ -307,7 +315,7 @@ elseif($text == "🗣پیامرسان⚙️"){
 زمان استفاده : <code>$time</code>
 تاریخ استفاده: <code>$date</code>
 💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-🇮🇷 @syeioo5
+🇮🇷 @syeioo
 🇮🇷 @pvsaz5450bot","html","true");
 	}
 	}else{
@@ -368,7 +376,7 @@ elseif($text == "🗣پیامرسان⚙️"){
 زمان استفاده : <code>$time</code>
 تاریخ استفاده: <code>$date</code>
 💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-🇮🇷 @syeioo5
+🇮🇷 @syeioo
 🇮🇷 @pvsaz5450bot","html","true");
 	}
 	}else{
@@ -429,7 +437,7 @@ elseif($text == "🗣پیامرسان⚙️"){
 زمان استفاده : <code>$time</code>
 تاریخ استفاده: <code>$date</code>
 💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-🇮🇷 @syeioo5
+🇮🇷 @syeioo
 🇮🇷 @pvsaz5450bot","html","true");
 	}
 	}else{
@@ -490,7 +498,7 @@ elseif($text == "🗣پیامرسان⚙️"){
 زمان استفاده : <code>$time</code>
 تاریخ استفاده: <code>$date</code>
 💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-🇮🇷 @syeioo5
+🇮🇷 @syeioo
 🇮🇷 @pvsaz5450bot","html","true");
 	}
 	}else{
@@ -551,7 +559,7 @@ elseif($text == "🗣پیامرسان⚙️"){
 زمان استفاده : <code>$time</code>
 تاریخ استفاده: <code>$date</code>
 💌💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-🇮🇷 @syeioo5
+🇮🇷 @syeioo
 🇮🇷 @pvsaz5450bot","html","true");
 	}
 	}else{
@@ -562,7 +570,7 @@ elseif($text == "🗣پیامرسان⚙️"){
 	}
 	}
 	
-    }elseif($text == '📊آمار فعلی ربات⌛️'){  
+	elseif($text == '📊آمار فعلی ربات⌛️'){  
 	  $txtt = file_get_contents('administrative/access/mum.txt');
     $member_id = explode("\n",$txtt);
     $mmemcount = count($member_id) -1;
@@ -632,7 +640,7 @@ Sorry, this username is already taken. Please try something different.
 7⃣ سپس پیام آخری که از ربات ( @BotFather ) دریافت کردید رو فوروارد کنید
 8⃣ ربات شما با موفقیت ثبت شد
 
-🆔 @syeioo5","html","true");
+🆔 @syeioo","html","true");
   }
   //===============
   elseif($text == '⚠️Help'){
@@ -647,7 +655,7 @@ That's already one of the registered username enter a different username. If you
 6⃣ now see the robot buttons (☢Build a Robot) press
 7⃣ The last message from the robot (@BotFather) you get the ball forward
 8⃣ was successfully registered your robot
-🆔 @syeioo5","html","true",$button_official_fa);
+🆔 @syeioo","html","true",$button_official_fa);
   }
   //===============
  
@@ -655,10 +663,9 @@ That's already one of the registered username enter a different username. If you
   //===============
     elseif($text == '⚜حساب ویژه'){
  sendMessage($chat_id,"جهت ویژه کردن ربات خود وارد لینک زیر شوید
-https://zarinp.al/provps.ir/3000
+https://www.payping.ir/d/yLN4
 سپس در فیلد مربوطه ایدی ربات خودرا وارد کنید
 <code>بعد از پرداخت ربات مربوطه ویژه خواهدشد!</code>
-❌توجه داشته باشید که فعلا این بخش غیرفعال میباشد و شما میبایست برای ما اسکرین شات ارسال نمایید❌
 ","HTML");
   }
   //================
@@ -702,7 +709,7 @@ https://zarinp.al/provps.ir/3000
 ☢ در صورت مشاهده استفاده از قابلیت های ربات در جهات منفی به شدت برخورد میشود.
 ☢ اگر به هر دلیلی درخواست های ربات شما به سرور ما بیش از حد معمول باشد (و حساب ربات ویژه نباشد) چند باری به شما اخطار داده میشود اگر این اخطار ها نادیده گرفته شوند ربات شما مسدود و به هیچ عنوان از محدودیت خارج نمیشود.
 
-🆔 @syeioo5","html","true");
+🆔 @syeioo","html","true");
   }
   //===============
   elseif($text == '⛔️Rules'){
@@ -714,7 +721,7 @@ https://zarinp.al/provps.ir/3000
 ☢ responsibility exchanged messages per robot with its director and we have no responsibility.
 ☢ if the robot's capabilities negative aspects are taken very seriously.
 ☢ If for any reason the request of the robot you to our server more than usual (and Account robot, especially not) a few times to warn you. If this warning is ignored, the robot blocked and no restriction does not exit.
-🆔 @syeioo5","html","true",$button_official_fa);
+🆔 @syeioo","html","true",$button_official_fa);
   }
   //===============
     elseif($text == '✈️ویژه کردن و ربات دوم'){
@@ -727,11 +734,11 @@ https://zarinp.al/provps.ir/3000
   }
   //===============
   elseif($text == '❇️امکانات'){
-   ForwardMessage($chat_id,"@syeioo5","119");  
+   ForwardMessage($chat_id,"@syeioo","77");  
    }
   //===============
   elseif($text == '❇️Facilities'){
-   ForwardMessage($chat_id,"@syeioo5","119");  
+   ForwardMessage($chat_id,"@syeioo","77");  
    }
   //===============
    elseif($text == 'دریافت لینک بازاریابی'){
@@ -893,7 +900,7 @@ https://zarinp.al/provps.ir/3000
 	  
   if(file_exists("Bot/$username_bot")){
   $pmtext = "{✅ ربات آپدیت شد توسط 👈 ($username)}{🤖 ربات مربوطه 👈 (@$username_bot)}{⏰ زمان 👈 ($time)}{📅 تاریخ 👈 ($date)}";
-  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
+  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
   $msg_id = $msgid->result->message_id;
   ForwardMessage($chat_id,"-1001146531348",$msg_id);
   save('administrative/user/'.$from_id."/command.txt","none");
@@ -902,7 +909,7 @@ https://zarinp.al/provps.ir/3000
     $textinstalls = "ربات شما با موفقیت در سرور @pvsaz5450bot بروزرسانی شد✅
 برای مشاهده خدمات لطفا /start را ارسال بکنید🗳";
   file_get_contents("http://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$textinstalls");
-  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://cd87870.jhfree.net/cv/Bot/$username_bot/");
+  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://provps.ir/hossein/Bot/$username_bot/");
   
   SendMessage($chat_id,"✅ ربات شما با موفقیت آپدیت شد.
 
@@ -921,7 +928,7 @@ https://zarinp.al/provps.ir/3000
   }else{
 	  
   $pmtext = "{✅ ربات ساخته شد توسط 👈 ($username)}{🤖 ربات مربوطه 👈 (@$username_bot)}{⏰ زمان 👈 ($time)}{📅 تاریخ 👈 ($date)}";
-  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
+  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
   $msg_id = $msgid->result->message_id;
   ForwardMessage($chat_id,"-1001146531348",$msg_id);
   save('administrative/user/'.$from_id."/command.txt","none");
@@ -959,7 +966,7 @@ https://zarinp.al/provps.ir/3000
   $textinstalls = "ربات شما با موفقیت به سرور @pvsaz5450bot متصل شد✅
 برای مشاهده خدمات لطفا /start را ارسال بکنید🗳";
   file_get_contents("http://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$textinstalls");
-  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://cd87870.jhfree.net/cv/Bot/$username_bot/");
+  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://provps.ir/hossein/Bot/$username_bot/");
   SendMessage($chat_id,"✅ ربات شما با موفقیت ساخته شد.
   
 ✴️ به ربات ما امتیاز بدین👇
@@ -1012,7 +1019,7 @@ https://zarinp.al/provps.ir/3000
 	  
   if(file_exists("Bot/$username_bot")){
   $pmtext = "{✅ ربات آپدیت شد توسط 👈 ($username)}{🤖 ربات مربوطه 👈 (@$username_bot)}{⏰ زمان 👈 ($time)}{📅 تاریخ 👈 ($date)}";
-  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
+  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
   $msg_id = $msgid->result->message_id;
   ForwardMessage($chat_id,"-1001146531348",$msg_id);
   save('administrative/user/'.$from_id."/command.txt","none");
@@ -1021,7 +1028,7 @@ https://zarinp.al/provps.ir/3000
     $textinstalls = "ربات شما با موفقیت در سرور @pvsaz5450bot بروزرسانی شد✅
 برای مشاهده خدمات لطفا /start را ارسال بکنید🗳";
   file_get_contents("http://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$textinstalls");
-  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://cd87870.jhfree.net/cv/Bot/$username_bot/");
+  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://provps.ir/hossein/Bot/$username_bot/");
   
   SendMessage($chat_id,"✅ ربات شما با موفقیت آپدیت شد.
 
@@ -1040,7 +1047,7 @@ https://zarinp.al/provps.ir/3000
   }else{
 	  
   $pmtext = "{✅ ربات ساخته شد توسط 👈 ($username)}{🤖 ربات مربوطه 👈 (@$username_bot)}{⏰ زمان 👈 ($time)}{📅 تاریخ 👈 ($date)}";
-  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
+  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
   $msg_id = $msgid->result->message_id;
   ForwardMessage($chat_id,"-1001146531348",$msg_id);
   save('administrative/user/'.$from_id."/command.txt","none");
@@ -1094,7 +1101,7 @@ https://zarinp.al/provps.ir/3000
   $textinstalls = "ربات شما با موفقیت به سرور @pvsaz5450bot متصل شد✅
 برای مشاهده خدمات لطفا /start را ارسال بکنید🗳";
   file_get_contents("http://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$textinstalls");
-  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://cd87870.jhfree.net/cv/Bot/$username_bot/");
+  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://provps.ir/hossein/Bot/$username_bot/");
   SendMessage($chat_id,"✅ ربات شما با موفقیت ساخته شد.
   
 ✴️ به ربات ما امتیاز بدین👇
@@ -1252,7 +1259,7 @@ SendMessage($chat_id,"یافت نشد.");
 	  
   if(file_exists("Bot/$username_bot")){
   $pmtext = "{✅ robot updated by 👈 ($username)} {🤖 the robot 👈 (@$username_bot)} {⏰ time 👈 ($time)} {📅 date 👈 ($date)}";
-  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
+  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
   $msg_id = $msgid->result->message_id;
   ForwardMessage($chat_id,"-1001146531348",$msg_id);
   save('administrative/user/'.$from_id."/command.txt","none");
@@ -1261,7 +1268,7 @@ SendMessage($chat_id,"یافت نشد.");
     $textinstalls = "You have successfully updated robot on a server @pvsaz5450bot✅
 To view Please services / start to write🗳";
   file_get_contents("http://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$textinstalls");
-  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://cd87870.jhfree.net/cv/Bot/$username_bot/");
+  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://provps.ir/hossein/Bot/$username_bot/");
   
   SendMessage($chat_id,"You have successfully updated ✅ robot.
 
@@ -1280,7 +1287,7 @@ To view Please services / start to write🗳";
   }else{
 	  
   $pmtext = "{✅ robot built by 👈 ($username)} {🤖 the robot 👈 (@$username_bot)} {⏰ time 👈 ($time)} {📅 date 👈 ($date)}";
-  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
+  $msgid = json_decode(file_get_contents('https://api.telegram.org/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/sendMessage?parse_mode=HTML&chat_id=-1001146531348&text='.$pmtext));
   $msg_id = $msgid->result->message_id;
   ForwardMessage($chat_id,"-1001146531348",$msg_id);
   save('administrative/user/'.$from_id."/command.txt","none");
@@ -1334,7 +1341,7 @@ To view Please services / start to write🗳";
   $textinstalls = "The robot has been successfully connected to the server @pvsaz5450bot Shd✅
 To view Please services / start to write Bknyd🗳";
   file_get_contents("http://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=$textinstalls");
-  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://cd87870.jhfree.net/cv/Bot/$username_bot/");
+  file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://provps.ir/hossein/Bot/$username_bot/");
   SendMessage($chat_id,"You have successfully Created Install ✅ robot.
 
 ✴️ to our robot Points Bdyn👇
@@ -1389,17 +1396,22 @@ To view Please services / start to write Bknyd🗳";
   save("administrative/code/$text.txt","false");
   save("administrative/user/".$from_id."/command.txt","none");
   SendMessage($chat_id,"☢ کد ثبت شد.","html","true",$button_manage);
-  SendMessage($kanal,"❤️کد رایگان:
-💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-Code : $text
-💌💌💌💌💌💌💌💌💌💌💌💌💌💌
-تنها یک نفر میتواند رباتش را Vip کند!
-روش استفاده:
-/code $text
-را داخل ربات @pvsaz5450bot ارسال نمایید
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+  SendMessage($kanal,"🎁کد اشتراک تبلیغات مخصوص همه ربات ها‼️:
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+🎁 Code : $text
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰
+تنها یک نفر میتواند تبلیغات رباتش را  بردارد!
+روش استفاده:👇👇
+
+1-  روی دکمه 🎁استفاده از کد💎 بزنید.
+2- نوع ربات خود را انتخاب کنید.
+3- کد را که در کانال فرستاده شده ارسال کنید.
+4- ایدی ربات خود را بدون @ و دقیق  (کوچک یا بزرگ بودن حروف) وارد کنید.
+➖➖➖➖➖➖➖➖➖➖➖➖
+➖➖➖➖➖
+@syeioo
 @pvsaz5450bot
-@syeioo5","html","true");
+مشخصات استفاده کننده کد👇","html","true");
   }
   elseif($text == '🅾️اطلاعات'){
   save("other/$from_id/command.txt","set idtaraf");
@@ -1613,7 +1625,7 @@ elseif($text == '📟تبلیغات' and $from_id == $admin){
 //============
 elseif(preg_match('/^\/([Bb]anall) (.*)/',$text) and $from_id == $admin){
 	preg_match('/^\/([Bb]anall) (.*)/',$text,$match);
-	$id = json_decode(file_get_contents("https://api.pwrtelegram.xyz/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/getChat?chat_id=".$match[2]));
+	$id = json_decode(file_get_contents("https://api.pwrtelegram.xyz/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/getChat?chat_id=".$match[2]));
 	$user = $id->result->id;
 	if($user != null){
 	$txxt = file_get_contents('administrative/banall-member/banall.txt');
@@ -1636,7 +1648,7 @@ Don't Message Again...❌*
 //============
  	elseif(preg_match('/^\/([Uu]n[Bb]anall) (.*)/',$text) and $from_id == $admin){
 	preg_match('/^\/([Uu]n[Bb]anall) (.*)/',$text,$match);
-	$id = json_decode(file_get_contents("https://api.pwrtelegram.xyz/bot442580454:AAE2S6gM6pVzGTMLc9-q3ZQJtRWmkKl_wfo/getChat?chat_id=".$match[2]));
+	$id = json_decode(file_get_contents("https://api.pwrtelegram.xyz/bot204374776:AAEarK46pm0Zr_dWdVEGRU0v0QBlbBty-7Y/getChat?chat_id=".$match[2]));
 	$user = $id->result->id;
 	if($user != null){
 	$rep = str_replace("$user\n",'',$block);
